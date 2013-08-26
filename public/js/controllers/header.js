@@ -1,10 +1,3 @@
-function HeaderController($scope, $location, Global) {
-	$scope.global = Global;
-	$scope.menu = [
+function HeaderController() {
 
-	];
-
-	$scope.init = function() {
-
-	};
 }
