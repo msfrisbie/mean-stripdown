@@ -1,1 +1,1 @@
-window.app = angular.module('ngFantasyFootball', ['ngCookies', 'ngResource', 'ui.bootstrap']);
+window.app = angular.module('ngFantasyFootball', ['ngCookies', 'ngResource', 'ngRoute', 'ui.bootstrap']);
