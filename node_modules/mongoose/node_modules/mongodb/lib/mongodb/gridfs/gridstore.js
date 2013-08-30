@@ -18,8 +18,7 @@ var Chunk = require('./chunk').Chunk,
   Stream = require('stream');
 
 // Set processor, setImmediate if 0.10 otherwise nextTick
-var processor = timers.setImmediate ? timers.setImmediate : process.nextTick;
-processor = process.nextTick
+var processor = require('../utils').processor();
 
 var REFERENCE_BY_FILENAME = 0,
   REFERENCE_BY_ID = 1;
@@ -1152,7 +1151,7 @@ GridStore.unlink = function(db, names, options, callback) {
     var tc = 0;
     for(var i = 0; i < names.length; i++) {
       ++tc;
-      self.unlink(db, names[i], function(result) {
+      self.unlink(db, names[i], options, function(result) {
         if(--tc == 0) {
             callback(null, self);
         }
