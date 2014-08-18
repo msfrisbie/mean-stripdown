@@ -13,7 +13,7 @@
       "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec test/test-*.js"
     }
   , "dependencies": {
-      "express": "latest"
+      "express": "3"
     , "jade": "latest"
     , "mongoose": "latest"
     , "connect-mongo": "latest"
